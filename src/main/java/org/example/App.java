@@ -1,17 +1,10 @@
 package org.example;
 
-
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
-/**
- * - SRP: Startpunkt; orkestrerar tjänster, hanterar fel (try/catch) och demoar kraven.
- * - Loggning: Viktiga händelser loggas via SLF4J.
- */
+
 public class App {
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
@@ -42,7 +35,6 @@ public class App {
             orderService.placeOrder("O-3", "Ali", List.of(p5, p1));
 
             // ogiltig (tom) för att visa EmptyOrderException
-            // orderService.placeOrder("O-4", "Jonas", List.of());
 
             // ogiltig (produkt ej i katalog) för att visa ProductNotFoundException
             // Product fake = new Product("FAKE", "Fake", "X", 1.0);
@@ -54,7 +46,7 @@ public class App {
         }
 
         // Streams: 1) Filtrera kategori + sortera stigande pris
-        var drycker = analysis.findProductsByCategorySorted("Dryck");
+        var drycker = analysis.findProductsByCategorySorted("Dryck");// var används för lokal typinferens (från Java 10).
         printer.printProducts("Produkter i kategorin 'Dryck' (pris stigande)", drycker);
 
         // Streams: 2) Totalvärde för kund

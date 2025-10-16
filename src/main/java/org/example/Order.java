@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * - SRP: Hålla ordningsdata (orderId, kundnamn, produkter).
- * - Lämplig datastruktur: List<Product> för att bevara ordning och möjliggöra dubbletter.
- *   Motivering: En kund kan köpa samma produkt flera gånger i en order -> List.
- */
+
 public class Order {
     private final String orderId;        // unikt id för ordern
     private final String customerName;   // kundens namn

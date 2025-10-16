@@ -8,10 +8,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/**
- * - SRP: Innehåller enbart analys/logik med Stream API.
- * - Streams för filtrering, sortering, gruppering, transformering.
- */
+
 public class AnalysisService {
     private static final Logger log = LoggerFactory.getLogger(AnalysisService.class);
     private final DataStore dataStore;
@@ -41,7 +38,7 @@ public class AnalysisService {
     /** Hitta de tre mest köpta produkterna totalt (top 3). */
     public List<Map.Entry<Product, Long>> top3MostPurchasedProducts() {
         log.info("Beräknar tre mest köpta produkterna");
-        // Steg:
+
         // 1) Alla produkter i alla order -> stream
         // 2) Gruppera på produkt -> räkna
         // 3) Sortera på count desc -> ta 3

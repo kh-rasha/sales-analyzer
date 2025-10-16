@@ -3,11 +3,7 @@ package org.example;
 
 import java.util.Objects;
 
-/**
- * - Klassens ansvar (SRP): Representera en Produkt med id, namn, kategori och pris.
- * - Oföränderlighet: id och name bör inte ändras efter skapande i detta enkla exempel.
- * - equals/hashCode behövs om vi vill lägga produkten i Set eller använda den som Map-nyckel.
- */
+
 public class Product {
     private final String id;      // unikt id
     private final String name;    // produktnamn

@@ -2,13 +2,9 @@ package org.example;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
-/**
- * - SRP: Hantera order-relaterade operationer (validering/lagring).
- * - Try/Catch exempel i anroparen (App) för robust felhantering.
- */
+
 public class OrderService {
     private static final Logger log = LoggerFactory.getLogger(OrderService.class);
     private final org.example.DataStore dataStore;
